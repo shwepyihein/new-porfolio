@@ -35,7 +35,7 @@ const About = () => {
       <div className="max-w-screen-lg mx-auto">
         <div>
           <div className="grid grid-cols-8 md:gap-3 relative">
-            <div className="md:file:col-span-2 col-span-3">
+            <div className="md:col-span-2 col-span-3">
               <Reveal width="100%">
                 <h2 className="md:text-7xl  text-3xl font-bold">About.</h2>
               </Reveal>
