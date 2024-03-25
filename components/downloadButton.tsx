@@ -55,9 +55,9 @@ const EncryptButton = () => {
       }}
       onMouseEnter={scramble}
       onMouseLeave={stopScramble}
-      className="group relative overflow-hidden rounded-lg border-[1px] border-neutral-500 bg-transparent px-4 py-2 font-mono font-medium uppercase text-neutral-300 min-w-[173px] transition-colors hover:text-indigo-300"
+      className="group relative overflow-hidden rounded-lg border-[1px] border-neutral-500 bg-transparent px-4 py-2 font-mono font-medium uppercase text-neutral-300 w-full min-w-[173px] transition-colors hover:text-indigo-300"
     >
-      <div className="relative z-10 flex items-center gap-2">
+      <div className="relative z-10 flex justify-between items-center gap-2">
         <svg
           stroke="currentColor"
           fill="none"
@@ -72,7 +72,7 @@ const EncryptButton = () => {
           <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
           <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
         </svg>
-        <span>{text}</span>
+        <p className="text-center w-full">{text}</p>
       </div>
       <motion.span
         initial={{
