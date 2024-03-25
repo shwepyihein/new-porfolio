@@ -110,6 +110,15 @@ export const AuroraBackground = () => {
 
   const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #020617 50%, ${color})`;
 
+  const animateData = {
+    visible: { opacity: 1, y: 0, x: 0 },
+    hidden: {
+      opacity: 0,
+      y: 0,
+      x: -200,
+    },
+  };
+
   return (
     <>
       <motion.div
@@ -129,10 +138,19 @@ export const AuroraBackground = () => {
       </motion.div>
       <div className="fixed hidden md:block z-30  w-[80px] top-10 left-0  h-full inset-0 ">
         <div className="flex flex-col transition-all duration-200  justify-between items-center gap-16">
-          {links.map((item) => {
+          {links.map((item, index) => {
             if (item === 'hero') {
               return (
-                <div
+                <motion.div
+                  initial="hidden"
+                  variants={animateData}
+                  animate={'visible'}
+                  transition={{
+                    duration: 0.4,
+                    staggerChildren: 0.2,
+                    type: 'spring',
+                    delay: 0.2 * index + 1,
+                  }}
                   key={item}
                   className={classNames(
                     activeSection === item ? '' : 'border-transparent',
@@ -140,22 +158,31 @@ export const AuroraBackground = () => {
                   )}
                 >
                   <img src="/projects/logo.png" alt="logo" />
-                </div>
+                </motion.div>
               );
             } else {
               return (
-                <div
+                <motion.div
+                  initial="hidden"
+                  variants={animateData}
+                  animate={'visible'}
+                  transition={{
+                    duration: 0.4,
+                    staggerChildren: 0.2,
+                    type: 'spring',
+                    delay: 0.2 * index + 1,
+                  }}
                   key={item}
                   onClick={() => handleClick(item)}
                   className={classNames(
                     activeSection === item ? 'border-b-2 border-gray-100 ' : '',
-                    '-rotate-90 duration-200   cursor-pointer w-full '
+                    '!-rotate-90 duration-200   cursor-pointer w-full '
                   )}
                 >
                   <p className="capitalize font-medium text-center pb-3">
                     {item}
                   </p>
-                </div>
+                </motion.div>
               );
             }
           })}

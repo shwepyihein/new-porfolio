@@ -1,5 +1,6 @@
 import { AuroraBackground } from '@/components/AuroraBackground';
 import ScrollSection from '@/components/ScrollSection';
+import SoicalMedia from '@/components/SoicalMedia';
 import About from '@/components/about';
 import ContactUs from '@/components/contact';
 import CustomCursor from '@/components/customCursor';
@@ -40,6 +41,7 @@ export default function Home() {
         />
         <meta property="twitter:image" content="/profile.png" />
       </Head>
+      <SoicalMedia />
       <CustomCursor />
       <AuroraBackground />
       <HeroSection />
