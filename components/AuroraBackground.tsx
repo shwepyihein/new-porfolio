@@ -161,9 +161,11 @@ export const AuroraBackground = () => {
           })}
         </div>
       </div>
-      <div className="fixed hidden md:block w-full py-6 right-0  px-20 z-[20] top-0">
+      <div className="fixed hidden md:block w-full py-6 right-0  px-10 z-[20] top-0">
         <div className="flex justify-end ">
-          <EncryptButton />
+          <a href="/projects/shwepyihein-cv.pdf" target="_blank" download>
+            <EncryptButton />
+          </a>
         </div>
       </div>
     </>

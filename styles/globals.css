@@ -32,6 +32,27 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .gallery-info-title {
+    @apply text-[30px];
+  }
+  .gallery-info-subtitle {
+    font-size: 20px;
+    @apply text-cyan-300;
+  }
+  .gallery-item-info {
+    @apply space-y-4;
+  }
+
+  .gallery-info-category {
+    @apply text-justify text-gray-400;
+  }
+  .scroll-section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    @apply items-start md:items-center;
+  }
 }
 
 .secondary-cursor {
@@ -75,14 +96,6 @@ body {
   display: flex;
   flex-direction: row;
   position: relative;
-}
-
-.scroll-section {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .scroll-section h3 {

@@ -1,6 +1,32 @@
 import Reveal from './reveal';
 
 const About = () => {
+  const technologies = [
+    'HTML/CSS3',
+    'JavaScript',
+    'React',
+    'Nextjs',
+    'Typescript',
+    'vite',
+    'GraphQL',
+    'Nestjs',
+    'strapi',
+    'Cypress',
+    'unit-testing',
+    'ui-testing',
+    'jest',
+    'Git',
+  ];
+
+  const useForFun = [
+    'ThreeJS',
+    'retool',
+    'tailwind',
+    'material ui',
+    'shadcn',
+    'shopee',
+    'framer-motion',
+  ];
   return (
     <div
       id="about"
@@ -61,30 +87,16 @@ const About = () => {
                     <p>Use At work</p>
                   </div>
                   <ul className="grid grid-cols-3 mt-3 gap-3">
-                    <li className="bg-gray-900 rounded-lg px-2 shadow-lg text-center py-1">
-                      JavaScript
-                    </li>
-                    <li className="bg-gray-900 rounded-lg px-2 shadow-lg text-center py-1">
-                      TypeScript
-                    </li>
-                    <li className="bg-gray-900 rounded-lg px-2 shadow-lg text-center py-1">
-                      React
-                    </li>
-                    <li className="bg-gray-900 rounded-lg px-2 shadow-lg text-center py-1">
-                      NextJS
-                    </li>
-                    <li className="bg-gray-900 rounded-lg px-2 shadow-lg text-center py-1">
-                      HTML
-                    </li>
-                    <li className="bg-gray-900 rounded-lg px-2 shadow-lg text-center py-1">
-                      CSS/SASS
-                    </li>
-                    <li className="bg-gray-900 rounded-lg px-2 shadow-lg text-center py-1">
-                      NestJS
-                    </li>
-                    <li className="bg-gray-900 rounded-lg px-2 shadow-lg text-center py-1">
-                      Postgres
-                    </li>
+                    {technologies.map((item) => {
+                      return (
+                        <li
+                          key={item}
+                          className="bg-gray-900 truncate border-opacity-25 border-gray-100 border rounded-lg px-2 shadow-lg text-center py-1  capitalize"
+                        >
+                          {item}
+                        </li>
+                      );
+                    })}
                   </ul>
                 </Reveal>
                 <Reveal>
@@ -103,30 +115,26 @@ const About = () => {
                     <p>Use For Fun</p>
                   </div>
                   <ul className="grid grid-cols-3 mt-3 gap-3">
-                    <li className="bg-gray-900 rounded-lg px-2 shadow-lg text-center py-1">
-                      JavaScript
-                    </li>
-                    <li className="bg-gray-900 rounded-lg px-2 shadow-lg text-center py-1">
-                      TypeScript
-                    </li>
-                    <li className="bg-gray-900 rounded-lg px-2 shadow-lg text-center py-1">
-                      React
-                    </li>
-                    <li className="bg-gray-900 rounded-lg px-2 shadow-lg text-center py-1">
-                      NextJS
-                    </li>
-                    <li className="bg-gray-900 rounded-lg px-2 shadow-lg text-center py-1">
-                      HTML
-                    </li>
-                    <li className="bg-gray-900 rounded-lg px-2 shadow-lg text-center py-1">
-                      CSS/SASS
-                    </li>
-                    <li className="bg-gray-900 rounded-lg px-2 shadow-lg text-center py-1">
-                      NestJS
-                    </li>
-                    <li className="bg-gray-900 rounded-lg px-2 shadow-lg text-center py-1">
-                      Postgres
-                    </li>
+                    {useForFun.map((item) => {
+                      if (item === 'framer-motion') {
+                        return (
+                          <li
+                            key={item}
+                            className="bg-gray-900 border border-opacity-25 border-gray-100 col-span-2 rounded-lg px-2 shadow-lg text-center py-1  capitalize"
+                          >
+                            {item}
+                          </li>
+                        );
+                      }
+                      return (
+                        <li
+                          key={item}
+                          className="bg-gray-900 border border-opacity-25 border-gray-100 rounded-lg px-2 shadow-lg text-center py-1  capitalize"
+                        >
+                          {item}
+                        </li>
+                      );
+                    })}
                   </ul>
                 </Reveal>
               </div>
