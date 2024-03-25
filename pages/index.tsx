@@ -12,6 +12,7 @@ export default function Home() {
     <div className="wrapper">
       <Head>
         <title>Shwe Pyi Hein | Web developer</title>
+        <link rel="icon" href="/profile.png" sizes="16x16" />
         <meta name="title" content="Shwe pyi hein | Web developer" />
         <meta
           name="description"
