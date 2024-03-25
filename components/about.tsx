@@ -47,7 +47,7 @@ const About = () => {
             <div className=" grid grid-cols-12 ">
               <div className="md:col-span-7 col-span-12 space-y-3">
                 <Reveal>
-                  <p className="md:text-2xl text-md text-pretty ">
+                  <p className="md:text-[22px] text-md text-pretty ">
                     <span className="bg-gray-800 py-2 px-2 mr-4">Hey!</span>I am
                     experience developer who constantly seeks out innovation
                     solutions to every problems and worked at both product-based
@@ -55,7 +55,7 @@ const About = () => {
                   </p>
                 </Reveal>
                 <Reveal>
-                  <p className="md:text-2xl text-md text-pretty ">
+                  <p className="md:text-[22px] text-md text-pretty ">
                     My commitment to critical thinking and attention to detail
                     have gotten me to where I am today. I love building things,
                     writes and debugs coding, solves problems, and also
@@ -63,7 +63,7 @@ const About = () => {
                   </p>
                 </Reveal>
                 <Reveal>
-                  <p className="md:text-2xl text-md text-pretty ">
+                  <p className="md:text-[22px] text-md text-pretty ">
                     I create websites, devise solutions, and play with Sketch
                     learning about design.
                   </p>
